@@ -1,9 +1,12 @@
 #!/bin/bash
 
-for f in .??*
-do
-  [[ "$f" == ".git" ]] && continue
-  [[ "$f" == ".DS_Store" ]] && continue
+script_dir_path=$(dirname $(greadlink -f $0))
 
-  ln -sfv "$HOME"/dotfiles/"$f" "$HOME"/"$f"
+for file_path in $script_dir_path/.??*
+do
+  file_name=${f##*/}
+  [[ $file_name == .git ]] && continue
+  [[ $file_name == .DS_Store ]] && continue
+
+  ln -sfv $file_path ~/$file_name
 done
