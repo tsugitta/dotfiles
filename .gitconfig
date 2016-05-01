@@ -1,0 +1,15 @@
+[user]
+  name = Toshinori Tsugita
+  email = tsugitta@gmail.com
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[color]
+  ui = auto
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[merge "mergepbx"]
+  name = Xcode project files merger
+  driver = mergepbx %O %A %B
