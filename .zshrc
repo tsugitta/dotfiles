@@ -45,6 +45,7 @@ alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
 alias u='space2underscore -c'
 alias ocaml="rlwrap ocaml"
 alias fk='eval $(thefuck $(fc -ln -1))'
+alias rm='rmtrash'
 
 alias -g G='| grep'
 alias -g L='| less'
