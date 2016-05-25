@@ -39,7 +39,6 @@ alias t="tmux"
 alias a="tmux attach"
 alias ctags="`brew --prefix`/bin/ctags"
 alias wh='which'
-alias vi='mvim'
 alias mvim='mvim --remote-tab-silent'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
@@ -116,6 +115,14 @@ function oa() {
     open -a atom .
   else
     open -a atom "$@"
+  fi
+}
+
+function vi() {
+  if [ -z "$1" ]; then
+    mvim .
+  else
+    mvim "$@"
   fi
 }
 
