@@ -12,6 +12,7 @@ call neobundle#begin(expand('/Users/tsugita/.vim/bundle'))
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Add or remove your Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
