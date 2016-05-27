@@ -63,7 +63,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'KohPoll/vim-less'
 " コマンド周り
 NeoBundle 'kana/vim-submode'
-" Required:
+
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'clausreinke/typescript-tools'
 
 if has('lua')
   NeoBundleLazy 'Shougo/neocomplete.vim', {
