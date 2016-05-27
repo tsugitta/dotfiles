@@ -322,9 +322,16 @@ endif
 """"""""""""""""""""""""""""""
 " 自動的に閉じ括弧を入力
 """"""""""""""""""""""""""""""
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi^V{<C-R>z}<ESC>
+vnoremap [ "zdi^V[<C-R>z]<ESC>
+vnoremap ( "zdi^V(<C-R>z)<ESC>
+vnoremap " "zdi^V"<C-R>z^V"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
 """"""""""""""""""""""""""""""
 
 " タブ入力
