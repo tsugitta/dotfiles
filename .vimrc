@@ -64,6 +64,9 @@ NeoBundle 'KohPoll/vim-less'
 " コマンド周り
 NeoBundle 'kana/vim-submode'
 
+" Search with The Silver Searcher
+NeoBundle 'rking/ag.vim'
+
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'clausreinke/typescript-tools.vim'
 
