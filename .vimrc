@@ -65,7 +65,7 @@ NeoBundle 'KohPoll/vim-less'
 NeoBundle 'kana/vim-submode'
 
 NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'clausreinke/typescript-tools'
+NeoBundle 'clausreinke/typescript-tools.vim'
 
 if has('lua')
   NeoBundleLazy 'Shougo/neocomplete.vim', {
