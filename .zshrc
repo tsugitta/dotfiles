@@ -21,7 +21,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
-export PATH=/usr/local/Cellar/vim/7.4.1063/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.nvm/nvm.sh
 
