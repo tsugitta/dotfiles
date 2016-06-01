@@ -23,6 +23,9 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.nvm/nvm.sh
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
 
 # Android Studio
 export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
