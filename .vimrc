@@ -69,6 +69,8 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'clausreinke/typescript-tools.vim'
 
+NeoBundle 'yaymukund/vim-rabl'
+
 if has('lua')
   NeoBundleLazy 'Shougo/neocomplete.vim', {
     \ 'depends' : 'Shougo/vimproc',
