@@ -42,6 +42,11 @@ NeoBundle 'scrooloose/nerdtree'
 " Gitを便利に使う
 NeoBundle 'tpope/vim-fugitive'
 
+NeoBundle 'vim-scripts/vim-auto-save'
+" デフォルトで有効にする
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+
 " Rails向けのコマンドを提供する
 NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
