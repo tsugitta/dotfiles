@@ -118,8 +118,6 @@ let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 " --------------------------------
 " syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
 " active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop']
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -162,17 +160,11 @@ set ttymouse=xterm2
 "ヤンクした文字は、システムのクリップボードに入れる
 set clipboard=unnamed,autoselect
 
-" 挿入モードでCtrl+pを押すとクリップボードの内容を貼り付けられるようにする
-imap <C-p>  <ESC>"*pa
-
 " Ev/Rvでvimrcの編集と反映
 command! Ev edit $MYVIMRC
 command! Rv source $MYVIMRC
 
 set helpfile=$VIMRUNTIME/doc/help.txt
-
-" ファイルタイプ判定をon
-filetype plugin on
 
 "-------------------------------------------------------------------------------
 " カラー関連 Colors
@@ -236,9 +228,6 @@ highlight CursorLine ctermbg=black guibg=black
 
 " コマンド実行中は再描画しない
 set lazyredraw
-" 高速ターミナル接続を行う
-set ttyfast
-
 
 " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
 """"""""""""""""""""""""""""""
@@ -384,6 +373,8 @@ set shiftwidth=2
 imap <C-k> <ESC>ld$a
 imap <C-y> <ESC>pi
 imap <C-d> <ESC>lxi
+imap <C-p>  <ESC>"*pa
+
 
 " 移動
 imap <C-a>  <Home>
