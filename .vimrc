@@ -20,8 +20,6 @@ NeoBundle 'Shougo/vimproc', {
   \ }
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'tpope/vim-endwise' " Insert end for Ruby
