@@ -180,7 +180,6 @@ endif
 
 set showmatch         " Highlight match parenthesis
 set number            " Line number
-set cursorline
 set list              " Show the char which cannot be read
 set listchars=tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
 set display=uhex      " 印字不可能文字を16進数で表示
