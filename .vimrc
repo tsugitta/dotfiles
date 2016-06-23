@@ -1,26 +1,15 @@
-"NeoBundle Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
+"-------------------------------------------------------------------------------
+" Plugins
+"-------------------------------------------------------------------------------
+set nocompatible               " Be iMproved
+
+if has('vim_starting') " Set neobundle path at initial launch
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-set runtimepath^=/Users/tsugita/.vim/bundle/neobundle.vim/
-
-" Required:
-call neobundle#begin(expand('/Users/tsugita/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
+call neobundle#begin(expand('~/.vim/bundle')) " Initialize
 NeoBundleFetch 'Shougo/neobundle.vim'
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-
-" parallel
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
@@ -29,298 +18,39 @@ NeoBundle 'Shougo/vimproc', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
-" ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
-" ファイルをtree表示してくれる
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
-" Gitを便利に使う
-NeoBundle 'tpope/vim-fugitive'
-
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/vim-auto-save'
-" デフォルトで有効にする
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-
-" Rails向けのコマンドを提供する
-NeoBundle 'tpope/vim-rails'
-" Ruby向けにendを自動挿入してくれる
-NeoBundle 'tpope/vim-endwise'
-
-" コメントON/OFFを手軽に実行
-NeoBundle 'tomtom/tcomment_vim'
-" シングルクオートとダブルクオートの入れ替え等
-NeoBundle 'tpope/vim-surround'
-
-" インデントに色を付けて見やすくする
-NeoBundle 'nathanaelkane/vim-indent-guides'
-" ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-" 行末の半角スペースを可視化(うまく動かない？)
-NeoBundle 'bronson/vim-trailing-whitespace'
-" less用のsyntaxハイライト
-NeoBundle 'KohPoll/vim-less'
-" コマンド周り
-NeoBundle 'kana/vim-submode'
-
-" Search with The Silver Searcher
-NeoBundle 'rking/ag.vim'
-
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'clausreinke/typescript-tools.vim'
-
-NeoBundle 'yaymukund/vim-rabl'
-
-if has('lua')
-  NeoBundleLazy 'Shougo/neocomplete.vim', {
-    \ 'depends' : 'Shougo/vimproc',
-    \ 'autoload' : { 'insert' : 1,}
-    \ }
-endif
-
-" neocomplete {{{
-let g:neocomplete#enable_at_startup               = 1
-let g:neocomplete#auto_completion_start_length    = 3
-let g:neocomplete#enable_ignore_case              = 1
-let g:neocomplete#enable_smart_case               = 1
-let g:neocomplete#enable_camel_case               = 1
-let g:neocomplete#use_vimproc                     = 1
-let g:neocomplete#sources#buffer#cache_limit_size = 1000000
-let g:neocomplete#sources#tags#cache_limit_size   = 30000000
-let g:neocomplete#enable_fuzzy_completion         = 1
-let g:neocomplete#lock_buffer_name_pattern        = '\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries = {
-\   'ruby': $HOME . '/.vim/dict/ruby.dict',
-\ }
-" }}}
+NeoBundle 'tpope/vim-endwise' " Insert end for Ruby
+NeoBundle 'tomtom/tcomment_vim' " Comment out with `ctrl + _`
+NeoBundle 'tpope/vim-surround' " Lets `cs({` or so
+NeoBundle 'vim-scripts/AnsiEsc.vim' " Colorize ANSI color for log file
+NeoBundle 'kana/vim-submode' " For command customizing
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'rking/ag.vim' " Search with The Silver Searcher
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Lokaltog/vim-powerline'
 
 call neobundle#end()
-
-filetype plugin indent on
-" --------------------------------
-" neocomplete.vim
-" --------------------------------
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
-
-" --------------------------------
-" rubocop
-" --------------------------------
-" syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
-" active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
 NeoBundleCheck
-"End NeoBundle Scripts-------------------------
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-set showtabline=2
-set noshowmode
 
 "-------------------------------------------------------------------------------
-" 基本設定 Basics
+" Plugin settings
 "-------------------------------------------------------------------------------
-let mapleader = ","              " キーマップリーダー
-set scrolloff=5                  " スクロール時の余白確保
-set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
-set nobackup                     " バックアップ取らない
-set autoread                     " 他で書き換えられたら自動で読み直す
-set noswapfile                   " スワップファイル作らない
-set hidden                       " 編集中でも他のファイルを開けるようにする
-set backspace=indent,eol,start   " バックスペースでなんでも消せるように
-set formatoptions=lmoq           " テキスト整形オプション，マルチバイト系を追加
-set vb t_vb=                     " ビープをならさない
-set browsedir=buffer             " Exploreの初期ディレクトリ
-set whichwrap=b,s,h,l,<,>,[,]    " カーソルを行頭、行末で止まらないようにする
-set showcmd                      " コマンドをステータス行に表示
-set showmode                     " 現在のモードを表示
-set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
-set modelines=0                  " モードラインは無効
-set notitle                      " vimを使ってくれてありがとう
+let g:user_emmet_leader_key='<C-R>' " Emmet works with `C-R,`
 
-" ターミナルでマウスを使用できるようにする
-set mouse=a
-set guioptions+=a
-set ttymouse=xterm2
-
-"ヤンクした文字は、システムのクリップボードに入れる
-set clipboard=unnamed,autoselect
-
-" Ev/Rvでvimrcの編集と反映
-command! Ev edit $MYVIMRC
-command! Rv source $MYVIMRC
-
-set helpfile=$VIMRUNTIME/doc/help.txt
+let g:auto_save = 1 " Enable by default
+let g:auto_save_in_insert_mode = 0
 
 "-------------------------------------------------------------------------------
-" カラー関連 Colors
+" Completion
 "-------------------------------------------------------------------------------
 
-set background=dark
-
-" ターミナルタイプによるカラー設定
-if &term =~ "xterm-256color" || "screen-256color"
-  " 256色
-  set t_Co=256
-  set t_Sf=[3%dm
-  set t_Sb=[4%dm
-elseif &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
-  set t_Co=16
-  set t_Sf=[3%dm
-  set t_Sb=[4%dm
-elseif &term =~ "xterm-color"
-  set t_Co=8
-  set t_Sf=[3%dm
-  set t_Sb=[4%dm
-endif
-
-" ハイライト on
-syntax enable
-
-" 補完候補の色づけ for vim7
-hi Pmenu ctermbg=255 ctermfg=0 guifg=#000000 guibg=#999999
-hi PmenuSel ctermbg=blue ctermfg=black
-hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
-hi PmenuSbar ctermbg=0 ctermfg=9
-hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
-
-"-------------------------------------------------------------------------------
-" 表示 Apperance
-"-------------------------------------------------------------------------------
-set showmatch         " 括弧の対応をハイライト
-set number            " 行番号表示
-set list              " 不可視文字表示
-set listchars=tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
-set display=uhex      " 印字不可能文字を16進数で表示
-set hlsearch          " 検索結果をハイライト
-
-" 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
-
-" カーソル行をハイライト
-set cursorline
-
-" カレントウィンドウにのみ罫線を引く
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter,BufRead * set cursorline
-augroup END
-
-hi clear CursorLine
-hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
-
-" コマンド実行中は再描画しない
-set lazyredraw
-
-" http://blog.remora.cx/2010/12/vim-ref-with-unite.html
-""""""""""""""""""""""""""""""
-" Unit.vimの設定
-""""""""""""""""""""""""""""""
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-" バッファ一覧
-noremap <C-P> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-N> :Unite -buffer-name=file file<CR>
-" 最近使ったファイルの一覧
-noremap <C-Z> :Unite file_mru<CR>
-" sourcesを「今開いているファイルのディレクトリ」とする
-noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
-" ウィンドウを分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-" ウィンドウを縦に分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-" ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-""""""""""""""""""""""""""""""
-
-" http://inari.hatenablog.com/entry/2014/05/05/231307
-""""""""""""""""""""""""""""""
-" 全角スペースの表示
-""""""""""""""""""""""""""""""
-function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-endfunction
-
-if has('syntax')
-    augroup ZenkakuSpace
-        autocmd!
-        autocmd ColorScheme * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
-    augroup END
-    call ZenkakuSpace()
-endif
-""""""""""""""""""""""""""""""
-
-" https://sites.google.com/site/fudist/Home/vim-nihongo-ban/-vimrc-sample
-""""""""""""""""""""""""""""""
-" 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
-""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""
-" 最後のカーソル位置を復元する
-""""""""""""""""""""""""""""""
-if has("autocmd")
-    autocmd BufReadPost *
-    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-    \   exe "normal! g'\"" |
-    \ endif
-endif
-""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""
-" 自動的に閉じ括弧を入力
-""""""""""""""""""""""""""""""
+" Parenthesis
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
@@ -332,21 +62,19 @@ vnoremap ( "zdi^V(<C-R>z)<ESC>
 vnoremap " "zdi^V"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
-function! DeleteParenthesesAdjoin()
-    let pos = col(".") - 1  " カーソルの位置．1からカウント
-    let str = getline(".")  " カーソル行の文字列
+function! DeleteParenthesesAdjoin() " http://qiita.com/m_mysht/items/56e5d5a17d07a64d8b65
+    let pos = col(".") - 1
+    let str = getline(".")
     let parentLList = ["(", "[", "{", "\'", "\""]
     let parentRList = [")", "]", "}", "\'", "\""]
     let cnt = 0
 
     let output = ""
 
-    " カーソルが行末の場合
     if pos == strlen(str)
         return "\b"
     endif
     for c in parentLList
-        " カーソルの左右が同種の括弧
         if str[pos-1] == c && str[pos] == parentRList[cnt]
             call cursor(line("."), pos + 2)
             let output = "\b"
@@ -356,38 +84,16 @@ function! DeleteParenthesesAdjoin()
     endfor
     return output."\b"
 endfunction
-" BackSpaceに割り当て
 inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
 inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
-""""""""""""""""""""""""""""""
 
-" タブ入力
-set tabstop=2
-set autoindent
-set smarttab 
-set expandtab
-set shiftwidth=2
+" tab settings
+"-------------------------------------------------------------------------------
+" Key binding
+"-------------------------------------------------------------------------------
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-" emacsキーバインド
-" 消去、編集
-imap <C-k> <ESC>ld$a
-imap <C-y> <ESC>pi
-imap <C-d> <ESC>lxi
-imap <C-p>  <ESC>"*pa
-
-
-" 移動
-imap <C-a>  <Home>
-imap <C-e>  <End>
-imap <C-b>  <Left>
-imap <C-f>  <Right>
-imap <C-n>  <Down>
-imap <C-p>  <UP>
-
-" filetypeの自動検出(最後の方に書いた方がいいらしい)
-filetype on
-
-" 画面分割周り(ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
+" Split view commands (ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
 nnoremap s <Nop>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -423,3 +129,92 @@ call submode#map('bufmove', 'n', '', '>', '<C-w>>')
 call submode#map('bufmove', 'n', '', '<', '<C-w><')
 call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
+" We love also Emacs <3
+imap <C-k> <ESC>ld$a
+imap <C-y> <ESC>pi
+imap <C-d> <ESC>lxi
+imap <C-p>  <ESC>"*pa
+
+imap <C-a>  <Home>
+imap <C-e>  <End>
+imap <C-b>  <Left>
+imap <C-f>  <Right>
+imap <C-n>  <Down>
+imap <C-p>  <UP>
+
+"-------------------------------------------------------------------------------
+" Appearance
+"-------------------------------------------------------------------------------
+set background=dark
+
+" ターミナルタイプによるカラー設定
+if &term =~ "xterm-256color" || "screen-256color"
+  " 256色
+  set t_Co=256
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
+  set t_Co=16
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-color"
+  set t_Co=8
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+endif
+
+set showmatch         " Highlight match parenthesis
+set number            " Line number
+set cursorline
+set list              " Show the char which cannot be read
+set listchars=tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
+set display=uhex      " 印字不可能文字を16進数で表示
+set hlsearch
+set lazyredraw
+
+"-------------------------------------------------------------------------------
+" Etc
+"-------------------------------------------------------------------------------
+set scrolloff=5                  " スクロール時の余白確保
+set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
+set nobackup                     " バックアップ取らない
+set autoread                     " 他で書き換えられたら自動で読み直す
+set noswapfile                   " スワップファイル作らない
+set hidden                       " 編集中でも他のファイルを開けるようにする
+set backspace=indent,eol,start   " バックスペースでなんでも消せるように
+set formatoptions=lmoq           " テキスト整形オプション，マルチバイト系を追加
+set vb t_vb=                     " ビープをならさない
+set browsedir=buffer             " Exploreの初期ディレクトリ
+set whichwrap=b,s,h,l,<,>,[,]    " カーソルを行頭、行末で止まらないようにする
+set showcmd
+set showmode
+set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
+set modelines=0                  " モードラインは無効
+set notitle
+
+set tabstop=2
+set autoindent
+set smartindent
+set expandtab
+set shiftwidth=2
+
+" ターミナルでマウスを使用できるようにする
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2
+
+"ヤンクした文字は、システムのクリップボードに入れる
+set clipboard=unnamed,autoselect
+
+" Ev/Rvでvimrcの編集と反映
+command! Ev edit $MYVIMRC
+command! Rv source $MYVIMRC
+
+set helpfile=$VIMRUNTIME/doc/help.txt
+
+set laststatus=2
+set showtabline=2
+
+filetype plugin indent on
+syntax enable
