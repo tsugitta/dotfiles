@@ -33,7 +33,16 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'rking/ag.vim' " Search with The Silver Searcher
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Lokaltog/vim-powerline'
+
+NeoBundleLazy 'leafgarland/typescript-vim', {
+\ 'autoload' : {
+\   'filetypes' : ['typescript'] }
+\}
+NeoBundleLazy 'jason0x43/vim-js-indent', {
+\ 'autoload' : {
+\   'filetypes' : ['javascript', 'typescript', 'html'],
+\}}
+NeoBundle 'Quramy/tsuquyomi'
 
 call neobundle#end()
 NeoBundleCheck
@@ -45,6 +54,11 @@ let g:user_emmet_leader_key='<C-R>' " Emmet works with `C-R,`
 
 let g:auto_save = 1 " Enable by default
 let g:auto_save_in_insert_mode = 0
+
+let g:js_indent_typescript = 1
+
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
 "-------------------------------------------------------------------------------
 " Completion
@@ -142,6 +156,8 @@ imap <C-b>  <Left>
 imap <C-f>  <Right>
 imap <C-n>  <Down>
 imap <C-p>  <UP>
+
+imap <C-Space> <C-x><C-o>
 
 "-------------------------------------------------------------------------------
 " Appearance
