@@ -28,6 +28,7 @@ NeoBundle 'tpope/vim-surround' " Lets `cs({` or so
 NeoBundle 'vim-scripts/AnsiEsc.vim' " Colorize ANSI color for log file
 NeoBundle 'kana/vim-submode' " For command customizing
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'yaymukund/vim-rabl'
 NeoBundle 'rking/ag.vim' " Search with The Silver Searcher
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'scrooloose/syntastic'
