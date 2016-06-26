@@ -56,6 +56,8 @@ alias -g X='| xargs'
 alias -s txt='cat'
 alias -s rb='ruby'
 
+alias pi='pod install'
+
 ## rails
 alias devlog='tail -f log/development.log'
 alias prodlog='tail -f log/production.log'

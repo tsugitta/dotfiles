@@ -1,6 +1,7 @@
 "-------------------------------------------------------------------------------
 " Plugins
 "-------------------------------------------------------------------------------
+
 set nocompatible               " Be iMproved
 
 if has('vim_starting') " Set neobundle path at initial launch
@@ -49,6 +50,7 @@ NeoBundleCheck
 "-------------------------------------------------------------------------------
 " Plugin settings
 "-------------------------------------------------------------------------------
+
 let g:user_emmet_leader_key='<C-R>' " Emmet works with `C-R,`
 
 let g:auto_save = 1 " Enable by default
@@ -104,12 +106,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " AutoComplPop like behavior.
 "let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -171,10 +167,10 @@ endfunction
 inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
 inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
 
-" tab settings
 "-------------------------------------------------------------------------------
 " Key binding
 "-------------------------------------------------------------------------------
+
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Split view commands (ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
@@ -231,6 +227,7 @@ imap <C-Space> <C-x><C-o>
 "-------------------------------------------------------------------------------
 " Appearance
 "-------------------------------------------------------------------------------
+
 set background=dark
 
 " ターミナルタイプによるカラー設定
@@ -274,6 +271,7 @@ nmap n nzz
 "-------------------------------------------------------------------------------
 " Etc
 "-------------------------------------------------------------------------------
+
 set scrolloff=5                  " スクロール時の余白確保
 set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
 set nobackup                     " バックアップ取らない
