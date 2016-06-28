@@ -33,6 +33,7 @@ NeoBundle 'yaymukund/vim-rabl'
 NeoBundle 'rking/ag.vim' " Search with The Silver Searcher
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 
 NeoBundleLazy 'leafgarland/typescript-vim', {
 \ 'autoload' : {
@@ -313,4 +314,5 @@ set laststatus=2
 set showtabline=2
 
 filetype plugin indent on
+filetype indent on
 syntax enable
