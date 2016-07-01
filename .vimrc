@@ -29,6 +29,7 @@ NeoBundle 'tpope/vim-surround' " Lets `cs({` or so
 NeoBundle 'vim-scripts/AnsiEsc.vim' " Colorize ANSI color for log file
 NeoBundle 'kana/vim-submode' " For command customizing
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'yaymukund/vim-rabl'
 NeoBundle 'rking/ag.vim' " Search with The Silver Searcher
 NeoBundle 'Shougo/neocomplete.vim'
@@ -43,7 +44,10 @@ NeoBundleLazy 'jason0x43/vim-js-indent', {
 \ 'autoload' : {
 \   'filetypes' : ['javascript', 'typescript', 'html'],
 \}}
-NeoBundle 'Quramy/tsuquyomi'
+NeoBundleLazy 'Quramy/tsuquyomi', {
+\ 'autoload' : {
+\   'filetypes' : ['typescript'] }
+\}
 
 call neobundle#end()
 NeoBundleCheck
@@ -126,6 +130,12 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+"-------------------------------------------------------------------------------
+" Syntax
+"-------------------------------------------------------------------------------
+
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 "-------------------------------------------------------------------------------
 " Completion
