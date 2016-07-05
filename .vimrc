@@ -223,8 +223,8 @@ call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
 " We love also Emacs <3
-imap <C-k> <ESC>ld$a
-imap <C-d> <ESC>lxi
+imap <C-k>  <ESC>ld$a
+imap <C-d>  <Del>
 imap <C-p>  <ESC>"*pa
 
 imap <C-a>  <Home>
