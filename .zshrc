@@ -27,10 +27,6 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 
-# Android Studio
-export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=$PATH:~/Library/Android/sdk/platform-tools/
-
 # alias
 alias c="cd"
 alias cd="cdls"
