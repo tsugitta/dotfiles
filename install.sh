@@ -8,5 +8,5 @@ do
   [[ $file_name == .git ]] && continue
   [[ $file_name == .DS_Store ]] && continue
 
-  ln -sfv $file_path ~/$file_name
+  ln -sfv $file_path ~/
 done
