@@ -1,8 +1,8 @@
 [user]
   name = Toshinori Tsugita
-  email = tsugitta@gmail.com
+  email = tsugita.dev@gmail.com
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
   editor = vim
 [color]
   ui = auto
