@@ -8,13 +8,13 @@ export ZSH=~/.oh-my-zsh
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# powerline settings
+# powerline settings (install with python installed by pyenv)
 POWERLINE_CUSTOM_CURRENT_PATH="%4~"
 POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_DETECT_SSH="true"
-export PATH=$PATH:~/Library/Python/2.7/bin
+export PATH=~/.local/bin:$PATH
 powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # init settings
 export PATH=/usr/local/bin:$PATH
