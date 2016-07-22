@@ -67,10 +67,14 @@ let g:user_emmet_leader_key='<C-R>' " Emmet works with `C-R,`
 let g:auto_save = 1 " Enable by default
 let g:auto_save_in_insert_mode = 0
 
+let g:ctrlp_custom_ignore = 'node_modules'
+
 let g:js_indent_typescript = 1
 
 let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_disable_default_mappings = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+let g:syntastic_disabled_filetypes=['html']
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -206,6 +210,8 @@ inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
 "-------------------------------------------------------------------------------
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-k> :TsuReferences<CR>
+nnoremap <silent><C-l> :TsuGeterr<CR>
 
 " Split view commands (ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
 nnoremap s <Nop>
