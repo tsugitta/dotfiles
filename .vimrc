@@ -210,8 +210,9 @@ inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
 "-------------------------------------------------------------------------------
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nnoremap <silent><C-k> :TsuReferences<CR>
-nnoremap <silent><C-l> :TsuGeterr<CR>
+nnoremap <silent><D-r> :TsuReferences<CR>
+nnoremap <silent><D-F> :TsuSearch 
+nnoremap <silent><D-d> :TsuDefinition<CR>
 
 " Split view commands (ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
 nnoremap s <Nop>
