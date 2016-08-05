@@ -210,6 +210,7 @@ inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
 "-------------------------------------------------------------------------------
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><D-u> :AutoSaveToggle<CR>
 nnoremap <silent><D-r> :TsuReferences<CR>
 nnoremap <silent><D-F> :TsuSearch 
 nnoremap <silent><D-d> :TsuDefinition<CR>
