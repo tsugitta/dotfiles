@@ -26,6 +26,7 @@ source $(brew --prefix nvm)/nvm.sh
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # alias
 alias c="cd"
