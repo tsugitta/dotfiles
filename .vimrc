@@ -331,6 +331,8 @@ set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
 set modelines=0                  " モードラインは無効
 set notitle
 
+autocmd BufWritePre * :%s/\s\+$//ge " trim spaces of the end of line
+
 set tabstop=2
 set autoindent
 set smartindent
