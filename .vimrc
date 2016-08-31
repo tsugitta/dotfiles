@@ -333,6 +333,13 @@ set notitle
 
 autocmd BufWritePre * :%s/\s\+$//ge " trim spaces of the end of line
 
+autocmd BufWritePre * call s:remove_line_in_last_line()
+function! s:remove_line_in_last_line()
+  if getline('$') == ""
+     $delete _
+  endif
+endfunction
+
 set tabstop=2
 set autoindent
 set smartindent
