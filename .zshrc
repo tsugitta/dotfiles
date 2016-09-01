@@ -38,7 +38,6 @@ alias t="tmux"
 alias a="tmux attach"
 alias ctags="`brew --prefix`/bin/ctags"
 alias wh='which'
-alias mvim='mvim --remote-tab-silent'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
 alias u='space2underscore -c'
