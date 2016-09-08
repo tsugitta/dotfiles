@@ -209,6 +209,7 @@ inoremap <silent> <C-h> <C-R>=DeleteParenthesesAdjoin()<CR>
 " Key binding
 "-------------------------------------------------------------------------------
 
+nnoremap <silent><C-g> :Ag
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <silent><D-u> :AutoSaveToggle<CR>
 nnoremap <silent><D-r> :TsuReferences<CR>
