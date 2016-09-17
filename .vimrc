@@ -41,19 +41,10 @@ NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'claco/jasmine.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-
-NeoBundleLazy 'leafgarland/typescript-vim', {
-\ 'autoload' : {
-\   'filetypes' : ['typescript'] }
-\}
-NeoBundleLazy 'jason0x43/vim-js-indent', {
-\ 'autoload' : {
-\   'filetypes' : ['javascript', 'typescript', 'html'],
-\}}
-NeoBundleLazy 'Quramy/tsuquyomi', {
-\ 'autoload' : {
-\   'filetypes' : ['typescript'] }
-\}
+NeoBundle 'gorodinskiy/vim-coloresque'
+NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes' : ['typescript']}}
+NeoBundleLazy 'jason0x43/vim-js-indent', {'autoload': {'filetypes' : ['javascript', 'typescript', 'html']}}
+NeoBundleLazy 'Quramy/tsuquyomi', {'autoload': {'filetypes' : ['typescript']}}
 
 call neobundle#end()
 NeoBundleCheck
@@ -213,7 +204,7 @@ nnoremap <silent><C-g> :Ag
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <silent><D-u> :AutoSaveToggle<CR>
 nnoremap <silent><D-r> :TsuReferences<CR>
-nnoremap <silent><D-F> :TsuSearch 
+nnoremap <silent><D-F> :TsuSearch
 nnoremap <silent><D-d> :TsuDefinition<CR>
 
 " Split view commands (ref: http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca)
