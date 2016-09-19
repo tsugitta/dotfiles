@@ -66,6 +66,7 @@ let g:tsuquyomi_disable_quickfix = 1
 let g:tsuquyomi_disable_default_mappings = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_javascript_checkers = ['eslint'] " You shouldn't use 'tsc' checker.
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
