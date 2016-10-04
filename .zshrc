@@ -43,6 +43,7 @@ alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
 alias u='space2underscore -c'
 alias fk='eval $(thefuck $(fc -ln -1))'
 alias rm='rmtrash'
+alias hb='hub browse'
 
 alias -g G='| grep'
 alias -g L='| less'
