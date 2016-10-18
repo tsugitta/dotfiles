@@ -59,6 +59,7 @@ let g:auto_save = 1 " Enable by default
 let g:auto_save_in_insert_mode = 0
 
 let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_root_markers = ['.ctrlp']
 
 let g:js_indent_typescript = 1
 
