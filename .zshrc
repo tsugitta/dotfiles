@@ -51,6 +51,7 @@ alias -g X='| xargs'
 
 alias -s txt='cat'
 alias -s rb='ruby'
+alias -s py='python'
 
 alias pi='pod install'
 
