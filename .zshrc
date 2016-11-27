@@ -12,9 +12,9 @@ source $ZSH/oh-my-zsh.sh
 POWERLINE_CUSTOM_CURRENT_PATH="%4~"
 POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_DETECT_SSH="true"
-export PATH=~/.local/bin:$PATH
+export PATH=~/Library/Python/2.7/bin:$PATH
 powerline-daemon -q
-. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # init settings
 export PATH=/usr/local/bin:$PATH
