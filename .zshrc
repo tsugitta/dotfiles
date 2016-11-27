@@ -20,7 +20,6 @@ powerline-daemon -q
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export PATH=~/.nodebrew/current/bin:$PATH
 eval "$(rbenv init -)"
 source $(brew --prefix nvm)/nvm.sh
 export PYENV_ROOT=$HOME/.pyenv
