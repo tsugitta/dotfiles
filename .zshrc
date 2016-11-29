@@ -21,7 +21,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 eval "$(rbenv init -)"
-source $(brew --prefix nvm)/nvm.sh
+source /usr/local/opt/nvm/nvm.sh
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
@@ -35,7 +35,7 @@ alias be="bundle exec"
 alias bi="bundle"
 alias t="tmux"
 alias a="tmux attach"
-alias ctags="`brew --prefix`/bin/ctags"
+alias ctags="/usr/local/bin/ctags"
 alias wh='which'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
