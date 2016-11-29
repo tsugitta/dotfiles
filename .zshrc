@@ -1,3 +1,7 @@
+if [ ~/dotfiles/.zshrc -nt ~/.zshrc.zwc ]; then
+  zcompile ~/.zshrc
+fi
+
 # import
 if [ -e ~/.zshrc.private ]; then
   . ~/.zshrc.private
