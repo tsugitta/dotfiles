@@ -19,16 +19,15 @@ POWERLINE_DETECT_SSH="true"
 export PATH=~/Library/Python/2.7/bin:$PATH
 powerline-daemon -q
 . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-
 # init settings
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 eval "$(rbenv init -)"
-source /usr/local/opt/nvm/nvm.sh
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # alias
