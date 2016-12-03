@@ -7,22 +7,15 @@ if [ -e ~/.zshrc.private ]; then
   . ~/.zshrc.private
 fi
 
-# oh-my-zsh settings
-export ZSH=~/.oh-my-zsh
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# powerline settings (install with python installed by pyenv)
-POWERLINE_CUSTOM_CURRENT_PATH="%4~"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_DETECT_SSH="true"
-export PATH=~/.local/bin:$PATH
-powerline-daemon -q
-. ~/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
-# init settings
+# # init settings
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH=~/.local/bin:$PATH
 eval "$(rbenv init -)"
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
@@ -33,7 +26,6 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 # alias
 alias c="cd"
 alias cd="cdls"
-alias ls="gls --color=auto -F"
 alias be="bundle exec"
 alias bi="bundle"
 alias t="tmux"
