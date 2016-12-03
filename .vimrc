@@ -37,7 +37,6 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'claco/jasmine.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
