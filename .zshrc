@@ -38,7 +38,6 @@ alias be="bundle exec"
 alias bi="bundle"
 alias t="tmux"
 alias a="tmux attach"
-alias ctags="/usr/local/bin/ctags"
 alias wh='which'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
