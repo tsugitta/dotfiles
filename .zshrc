@@ -48,6 +48,9 @@ alias -s py='python'
 
 alias pi='pod install'
 
+## git
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+
 ## rails
 alias devlog='tail -f log/development.log'
 alias prodlog='tail -f log/production.log'
