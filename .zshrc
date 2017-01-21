@@ -24,6 +24,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # alias
+alias -- -="cd -"
+alias ...="../../"
+alias ....="../../../"
 alias c="cd"
 alias cd="cdls"
 alias be="bundle exec"
