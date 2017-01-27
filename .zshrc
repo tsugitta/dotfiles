@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# # init settings
+# init settings
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -22,6 +22,7 @@ export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export PATH="./node_modules/.bin:$PATH"
 
 # alias
 alias -- -="cd -"
@@ -92,6 +93,9 @@ alias rrg='bundle exec rake routes | grep'
 alias rt='bundle exec rake test'
 alias rmd='bundle exec rake middleware'
 alias rsts='bundle exec rake stats'
+
+# misc
+unsetopt correct
 
 # function
 function op() {
