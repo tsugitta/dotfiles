@@ -56,9 +56,9 @@ alias pi='pod install'
 alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|staging)\s*$)" | command xargs -n 1 git branch -d'
 
 ## rails
-alias devlog='tail -f log/development.log'
-alias prodlog='tail -f log/production.log'
-alias testlog='tail -f log/test.log'
+alias dlog='less log/development.log'
+alias plog='less log/production.log'
+alias tlog='less log/test.log'
 
 alias -g RED='RAILS_ENV=development'
 alias -g REP='RAILS_ENV=production'
