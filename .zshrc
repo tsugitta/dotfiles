@@ -134,17 +134,6 @@ function cdls() {
   \cd "$@" && ls
 }
 
-function gplrb {
-  if [ -z "$1" ]; then
-    echo 'error: Speify the target branch'
-  else
-    git pull origin $@:$@
-    git stash
-    git rebase $@
-    git stash pop
-  fi
-}
-
 # peco
 autoload -Uz is-at-least
 if is-at-least 4.3.11
