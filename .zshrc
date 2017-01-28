@@ -116,9 +116,9 @@ function os() {
 
 function oa() {
   if [ -z "$1" ]; then
-    open -a atom .
+    open -a /Applications/Atom.app .
   else
-    open -a atom "$@"
+    open -a /Applications/Atom.app "$@"
   fi
 }
 
