@@ -45,6 +45,7 @@ alias hb='hub browse'
 alias -g G='| grep'
 alias -g L='| less'
 alias -g X='| xargs'
+alias -g C='| pbcopy'
 
 alias -s txt='cat'
 alias -s rb='ruby'
