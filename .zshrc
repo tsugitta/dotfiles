@@ -32,6 +32,7 @@ alias c="cd"
 alias cd="cdls"
 alias be="bundle exec"
 alias bi="bundle"
+alias pi='pod install'
 alias t="tmux"
 alias a="tmux attach"
 alias wh='which'
@@ -42,6 +43,9 @@ alias fk='eval $(thefuck $(fc -ln -1))'
 alias rm='rmtrash'
 alias hb='hub browse'
 
+# remove already merged branches
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|staging)\s*$)" | command xargs -n 1 git branch -d'
+
 alias -g G='| grep'
 alias -g L='| less'
 alias -g X='| xargs'
@@ -50,11 +54,6 @@ alias -g C='| pbcopy'
 alias -s txt='cat'
 alias -s rb='ruby'
 alias -s py='python'
-
-alias pi='pod install'
-
-## git
-alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|staging)\s*$)" | command xargs -n 1 git branch -d'
 
 ## rails
 alias dlog='less log/development.log'
@@ -67,36 +66,21 @@ alias -g RET='RAILS_ENV=test'
 
 alias rc='bundle exec rails console'
 alias rd='bundle exec rails destroy'
-alias rdb='bundle exec rails dbconsole'
 alias rg='bundle exec rails generate'
 alias rgm='bundle exec rails generate migration'
-alias rp='bundle exec rails plugin'
 alias ru='bundle exec rails runner'
-alias rs='bundle exec rails server'
-alias rsb='bundle exec rails server -b 0.0.0.0'
-alias rsd='bundle exec rails server --debugger'
-alias rsp='bundle exec rails server --port'
+alias rs='bundle exec rails server -b 0.0.0.0'
+alias rsp='bundle exec rails server -b 0.0.0.0 --port'
 
 alias rdm='bundle exec rake db:migrate'
-alias rdms='bundle exec rake db:migrate:status'
 alias rdr='bundle exec rake db:rollback'
 alias rdc='bundle exec rake db:create'
 alias rds='bundle exec rake db:seed'
 alias rdd='bundle exec rake db:drop'
 alias rdrs='bundle exec rake db:reset'
-alias rdtc='bundle exec rake db:test:clone'
-alias rdtp='bundle exec rake db:test:prepare'
-alias rdmtc='bundle exec rake db:migrate db:test:clone'
-alias rlc='bundle exec rake log:clear'
-alias rn='bundle exec rake notes'
-alias rr='bundle exec rake routes'
-alias rrg='bundle exec rake routes | grep'
-alias rt='bundle exec rake test'
-alias rmd='bundle exec rake middleware'
-alias rsts='bundle exec rake stats'
 
 # misc
-unsetopt correct
+unsetopt correct # disable auto correct
 
 # function
 function op() {
