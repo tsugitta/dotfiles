@@ -1,6 +1,6 @@
 ## tsugitta's dotfiles
 
-To just record my dotfiles for me. The particular dotfile, such as `.zshrc`, assumes that `powerline` or `rbenv` and so on are already installed; so these dotfiles cannot be used perfectly by itself.
+To just record my dotfiles for me. The particular dotfile, such as `.zshrc`, assumes that `rbenv` or `pyenv` and so on are already installed; so these dotfiles cannot be used perfectly by itself.
 
 ### Copying dotfiles
 
