@@ -80,3 +80,5 @@ remapKey({'ctrl'}, 'h', keyCode('delete'))
 remapKey({'ctrl'}, '[', keyCode('escape'))
 remapKey({'ctrl'}, 'a', keyCode('left', {'cmd'}))
 remapKey({'ctrl'}, 'e', keyCode('right', {'cmd'}))
+
+remapKey({'ctrl'}, "'", keyCode("`"))
