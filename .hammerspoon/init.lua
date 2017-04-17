@@ -71,6 +71,11 @@ remapKey({'ctrl', 'alt', 'shift'}, 'b', keyCode('left', {'alt', 'shift'}))
 remapKey({'ctrl', 'alt', 'shift'}, 'n', keyCode('down', {'alt', 'shift'}))
 remapKey({'ctrl', 'alt', 'shift'}, 'p', keyCode('up', {'alt', 'shift'}))
 
+remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'f', keyCode('right', {'alt', 'shift', 'cmd'}))
+remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'b', keyCode('left', {'alt', 'shift', 'cmd'}))
+remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'n', keyCode('down', {'alt', 'shift', 'cmd'}))
+remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'p', keyCode('up', {'alt', 'shift', 'cmd'}))
+
 remapKey({'ctrl'}, 'h', keyCode('delete'))
 remapKey({'ctrl'}, '[', keyCode('escape'))
 remapKey({'ctrl'}, 'a', keyCode('left', {'cmd'}))
