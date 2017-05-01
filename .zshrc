@@ -83,6 +83,7 @@ alias rdrs='bundle exec rake db:reset'
 
 # misc
 unsetopt correct # disable auto correct
+setopt nonomatch
 
 # function
 function op() {
