@@ -30,6 +30,8 @@ alias ...="../../"
 alias ....="../../../"
 alias c="cd"
 alias cd="cdls"
+alias ls="ls --color=auto"
+alias l="ls -1A --color=auto"
 alias be="bundle exec"
 alias bi="bundle"
 alias pi='pod install'
