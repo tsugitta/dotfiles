@@ -77,6 +77,7 @@ remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'n', keyCode('down', {'alt', 'shift', 
 remapKey({'ctrl', 'alt', 'shift', 'cmd'}, 'p', keyCode('up', {'alt', 'shift', 'cmd'}))
 
 remapKey({'ctrl'}, 'h', keyCode('delete'))
+remapKey({'ctrl'}, 'd', keyCode('forwarddelete'))
 remapKey({'ctrl'}, '[', keyCode('escape'))
 remapKey({'ctrl'}, 'a', keyCode('left', {'cmd'}))
 remapKey({'ctrl'}, 'e', keyCode('right', {'cmd'}))
