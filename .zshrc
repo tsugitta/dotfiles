@@ -110,6 +110,14 @@ function oa() {
   fi
 }
 
+function ov() {
+  if [ -z "$1" ]; then
+    open -a /Applications/Visual\ Studio\ Code.app .
+  else
+    open -a /Applications/Visual\ Studio\ Code.app "$@"
+  fi
+}
+
 function vi() {
   if [ -z "$1" ]; then
     mvim .
