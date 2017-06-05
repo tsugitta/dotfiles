@@ -24,6 +24,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # alias
 alias -- -="cd -"
