@@ -75,6 +75,7 @@ alias rgm='bin/rails generate migration'
 alias ru='bin/rails runner'
 alias rs='bin/rails server -b 0.0.0.0'
 alias rsp='bin/rails server -b 0.0.0.0 --port'
+alias rr='bin/rails runner'
 
 alias rdm='bin/rake db:migrate'
 alias rdr='bin/rake db:rollback'
