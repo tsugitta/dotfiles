@@ -23,34 +23,35 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# eval "$(rbenv init -)"
-ruby() {
-  unset -f ruby rbenv
-  eval "$(command rbenv init -)"
-  ruby "$@"
-}
-rbenv() {
-  unset -f ruby rbenv
-  eval "$(command rbenv init -)"
-  rbenv "$@"
-}
+eval "$(rbenv init -)"
+# ruby() {
+#   unset -f ruby rbenv
+#   eval "$(command rbenv init -)"
+#   ruby "$@"
+# }
+# rbenv() {
+#   unset -f ruby rbenv
+#   eval "$(command rbenv init -)"
+#   rbenv "$@"
+# }
+#
 
-# eval "$(pyenv init -)"
-pip() {
-  unset -f pip python pyenv
-  eval "$(command pyenv init -)"
-  pip "$@"
-}
-python() {
-  unset -f pip python pyenv
-  eval "$(command pyenv init -)"
-  python "$@"
-}
-pyenv() {
-  unset -f pip python pyenv
-  eval "$(command pyenv init -)"
-  pyenv "$@"
-}
+eval "$(pyenv init -)"
+# pip() {
+#   unset -f pip python pyenv
+#   eval "$(command pyenv init -)"
+#   pip "$@"
+# }
+# python() {
+#   unset -f pip python pyenv
+#   eval "$(command pyenv init -)"
+#   python "$@"
+# }
+# pyenv() {
+#   unset -f pip python pyenv
+#   eval "$(command pyenv init -)"
+#   pyenv "$@"
+# }
 
 # [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 go() {
