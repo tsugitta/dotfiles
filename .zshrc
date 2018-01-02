@@ -24,47 +24,9 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 eval "$(rbenv init -)"
-# ruby() {
-#   unset -f ruby rbenv
-#   eval "$(command rbenv init -)"
-#   ruby "$@"
-# }
-# rbenv() {
-#   unset -f ruby rbenv
-#   eval "$(command rbenv init -)"
-#   rbenv "$@"
-# }
-#
-
 eval "$(pyenv init -)"
-# pip() {
-#   unset -f pip python pyenv
-#   eval "$(command pyenv init -)"
-#   pip "$@"
-# }
-# python() {
-#   unset -f pip python pyenv
-#   eval "$(command pyenv init -)"
-#   python "$@"
-# }
-# pyenv() {
-#   unset -f pip python pyenv
-#   eval "$(command pyenv init -)"
-#   pyenv "$@"
-# }
-
-# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-go() {
-  unset -f go gvm
-  [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-  go "$@"
-}
-gvm() {
-  unset -f go gvm
-  [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-  gvm "$@"
-}
 eval "$(ndenv init -)"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # alias
 alias -- -="cd -"
