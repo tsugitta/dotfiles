@@ -18,7 +18,7 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=~/.local/bin:$PATH
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.ndenv/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -64,6 +64,7 @@ gvm() {
   [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
   gvm "$@"
 }
+eval "$(ndenv init -)"
 
 # alias
 alias -- -="cd -"
