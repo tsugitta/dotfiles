@@ -22,10 +22,13 @@ export PATH=$HOME/.ndenv/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(ndenv init -)"
+eval "$(jenv init -)"
+
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # alias
