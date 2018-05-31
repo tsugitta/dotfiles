@@ -15,7 +15,6 @@ brew "ffmpeg"
 brew "gradle"
 brew "hub"
 brew "imagemagick@6", link: true
-brew "jenv"
 brew "jq"
 brew "libxml2", link: true
 brew "macvim"
