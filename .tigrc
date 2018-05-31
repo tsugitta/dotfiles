@@ -4,3 +4,6 @@ set diff-context = 5
 
 bind generic <Ctrl-f> scroll-page-down
 bind generic <Ctrl-b> scroll-page-up
+
+bind main    R !git rebase -i %(commit)
+bind diff    R !git rebase -i %(commit)
