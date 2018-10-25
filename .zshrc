@@ -187,3 +187,7 @@ if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then source $HOME/google-cloud-sd
 
 # The next line enables shell command completion for gcloud.
 if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then source $HOME/google-cloud-sdk/completion.zsh.inc; fi
+
+# completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
