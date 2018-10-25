@@ -12,20 +12,21 @@ fi
 
 # Path exportation & load plugins
 #
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export PATH=~/.local/bin:$PATH
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 export PATH=$HOME/.ndenv/bin:$PATH
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(ndenv init -)"
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH="./node_modules/.bin:$PATH"
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
