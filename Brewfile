@@ -17,7 +17,6 @@ brew "hub"
 brew "imagemagick@6", link: true
 brew "jq"
 brew "libxml2", link: true
-brew "macvim"
 brew "mysql", restart_service: true
 brew "peco"
 brew "postgresql", restart_service: true

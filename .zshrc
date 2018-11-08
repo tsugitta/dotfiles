@@ -127,9 +127,9 @@ function ov() {
 
 function vi() {
   if [ -z "$1" ]; then
-    mvim .
+    vim .
   else
-    mvim "$@"
+    vim "$@"
   fi
 }
 
