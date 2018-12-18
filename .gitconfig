@@ -2,8 +2,9 @@
   name = Toshinori Tsugita
   email = tsugita.dev@gmail.com
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = /Users/tsugita/.gitignore_global
   editor = vim
+  pager = less -r
 [color]
   ui = auto
 [filter "lfs"]
@@ -18,12 +19,12 @@
   name = Xcode project files merger
   driver = mergepbx %O %A %B
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [pull]
-	rebase = preserve
+  rebase = preserve
 [rebase]
-	autostash = true
+  autostash = true
