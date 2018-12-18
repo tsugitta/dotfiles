@@ -9,3 +9,5 @@ bind main    R !git rebase -i %(commit)
 bind diff    R !git rebase -i %(commit)
 
 set diff-options = -m --first-parent
+
+set wrap-lines = yes
