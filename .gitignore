@@ -1,5 +1,3 @@
-.zshrc.private
-.bundle/cache/
+home/.zshrc.private
+home/.bundle/cache/
 
-.vim/bundle
-.vim/.netrwhist

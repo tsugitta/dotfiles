@@ -1,14 +1,10 @@
 #!/bin/bash
+set -eu
 
-script_dir_path=$(dirname $(greadlink -f $0))
+home_dir_path="$(dirname $(greadlink -f $0))/home"
 
-for file_path in $script_dir_path/.??*
+for file_path in $home_dir_path/.??*
 do
-  file_name=${file_path##*/}
-  [[ $file_name == .git ]] && continue
-  [[ $file_name == .gitignore ]] && continue
-  [[ $file_name == .gitmodules ]] && continue
-  [[ $file_name == .DS_Store ]] && continue
-
+  echo $file_path
   ln -sfv $file_path ~/
 done
