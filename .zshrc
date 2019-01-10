@@ -58,6 +58,7 @@ alias -g G='| grep'
 alias -g L='| less'
 alias -g X='| xargs'
 alias -g C='| pbcopy'
+alias -g P='| peco'
 
 alias -s txt='cat'
 alias -s rb='ruby'
