@@ -91,6 +91,9 @@ alias rdrs='bin/rake db:reset'
 unsetopt correct # disable auto correct
 setopt nonomatch
 
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+
 # function
 function op() {
   if [ -z "$1" ]; then
