@@ -103,14 +103,6 @@ function op() {
   fi
 }
 
-function os() {
-  if [ -z "$1" ]; then
-    open -a sublime\ text .
-  else
-    open -a sublime\ text "$@"
-  fi
-}
-
 function oa() {
   if [ -z "$1" ]; then
     open -a /Applications/Atom.app .
