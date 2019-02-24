@@ -6,6 +6,7 @@ bind generic <Ctrl-f> scroll-page-down
 bind generic <Ctrl-b> scroll-page-up
 
 bind main    R !git rebase -i %(commit)
+bind main    ! ?git revert %(commit)
 bind diff    R !git rebase -i %(commit)
 bind status  D !@?rm %(file)
 
