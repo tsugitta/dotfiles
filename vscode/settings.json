@@ -1,0 +1,46 @@
+{
+  // general
+  "editor.fontFamily": "Operator Mono SSm",
+  "editor.largeFileOptimizations": false,
+  "editor.renderIndentGuides": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onWindowChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "One Dark Italic",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.formatOnSave": true,
+  "files.trimFinalNewlines": true,
+  "editor.minimap.enabled": false,
+  "editor.fontWeight": "500",
+
+  "files.exclude": {
+    ".git": true,
+    ".git/*": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/build": true,
+    "**/CVS": true,
+    "**/node_modules": true,
+    "log/*": true,
+    "node_modules": true,
+    "vendor/*": true
+  },
+
+  // JavaScript / TypeScript
+  "tslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "relative",
+
+  // other extension
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  }
+}

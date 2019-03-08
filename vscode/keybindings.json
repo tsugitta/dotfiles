@@ -1,0 +1,18 @@
+[
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+left",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+right",
+    "command": "workbench.action.navigateForward"
+  }
+]
