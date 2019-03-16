@@ -9,10 +9,12 @@
   },
   {
     "key": "cmd+left",
-    "command": "workbench.action.navigateBack"
+    "command": "workbench.action.navigateBack",
+    "when": "editorTextFocus"
   },
   {
     "key": "cmd+right",
-    "command": "workbench.action.navigateForward"
+    "command": "workbench.action.navigateForward",
+    "when": "editorTextFocus"
   }
 ]
