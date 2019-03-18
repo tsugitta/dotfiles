@@ -8,12 +8,12 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "cmd+left",
+    "key": "cmd+ctrl+left",
     "command": "workbench.action.navigateBack",
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+right",
+    "key": "cmd+ctrl+right",
     "command": "workbench.action.navigateForward",
     "when": "editorTextFocus"
   }
