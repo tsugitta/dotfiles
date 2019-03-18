@@ -34,6 +34,11 @@
     "vendor/*": true
   },
 
+  "search.exclude": {
+    "**/ios": true,
+    "**/android": true
+  },
+
   // JavaScript / TypeScript
   "tslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
