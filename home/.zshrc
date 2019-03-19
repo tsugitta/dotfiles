@@ -14,6 +14,7 @@ fi
 #
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 eval "$(rbenv init -)"
 
