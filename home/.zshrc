@@ -13,6 +13,7 @@ fi
 # Path exportation & load plugins
 #
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export PATH="$HOME/.tfenv/bin:$PATH"
 
 eval "$(rbenv init -)"
 
