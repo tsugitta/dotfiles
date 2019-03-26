@@ -11,7 +11,7 @@
   "files.trimTrailingWhitespace": true,
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark Italic",
+  "workbench.colorTheme": "One Monokai Italic",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "editor.formatOnSave": true,

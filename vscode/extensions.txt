@@ -9,6 +9,7 @@ eg2.tslint
 esbenp.prettier-vscode
 GitHub.vscode-pull-request-github
 jpoissonnier.vscode-styled-components
+lrecknagel.one-monokai-italic
 mauve.terraform
 mblode.one-dark-italic
 mermade.openapi-lint
