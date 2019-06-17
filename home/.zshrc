@@ -42,7 +42,6 @@ alias a="tmux attach"
 alias wh='which'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
-alias u='space2underscore -c'
 alias fk='eval $(thefuck $(fc -ln -1))'
 alias rm='rmtrash'
 alias hb='hub browse'
@@ -127,6 +126,12 @@ function vi() {
 
 function cdls() {
   \cd "$@" && ls
+}
+
+function u() {
+  with_spaces=$*
+  with_underscore=${with_spaces// /_}
+  git checkout -b $with_underscore
 }
 
 # peco
