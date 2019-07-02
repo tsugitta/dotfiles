@@ -16,13 +16,13 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
-eval "$(rbenv init -)"
-
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
+
+eval "$(rbenv init -)"
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
