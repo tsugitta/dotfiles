@@ -4,8 +4,13 @@ set -eu
 vscode_dir_path="$(dirname $(greadlink -f $0))/vscode"
 
 # settings
+paths=(
+  $vscode_dir_path/keybindings.json
+  $vscode_dir_path/settings.json
+  $vscode_dir_path/snippets/
+)
 
-for file_path in $vscode_dir_path/*.json
+for file_path in ${paths[@]}
 do
   echo $file_path
   ln -sfv $file_path ~/Library/Application\ Support/Code/User
