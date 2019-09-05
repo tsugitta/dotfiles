@@ -87,6 +87,7 @@ alias rdrs='bin/rake db:reset'
 # misc
 unsetopt correct # disable auto correct
 setopt nonomatch
+setopt interactivecomments
 
 bindkey "[D" backward-word
 bindkey "[C" forward-word
