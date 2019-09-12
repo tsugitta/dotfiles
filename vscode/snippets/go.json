@@ -1,4 +1,65 @@
 {
+  "IO NextInt": {
+    "prefix": "ioni",
+    "body": [
+      "$1 := io.NextInt()"
+    ]
+  },
+  "IO NextInts": {
+    "prefix": "ionis",
+    "body": [
+      "$1 := io.NextInts($2)"
+    ]
+  },
+  "2-dim slice": {
+    "prefix": "2dim",
+    "body": [
+      "$1 := make([][]int, $2)",
+      "for i := range $1 {",
+      "\t$1[i] = make([]int, $3)",
+      "}"
+    ]
+  },
+  "rep": {
+    "prefix": "rep",
+    "body": [
+      "for i := 0; i < $1; i++ {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "revrep": {
+    "prefix": "revrep",
+    "body": [
+      "for i := $1; i >= 0; i-- {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "struct": {
+    "prefix": "tyst",
+    "body": [
+      "type $1 struct {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "slice": {
+    "prefix": "slice",
+    "body": [
+      "$1 := make([]int, $2)"
+    ]
+  },
+  "copy-reverse": {
+    "prefix": "copy-reverse",
+    "body": [
+      "$1 := make([]int, len($2))",
+      "for i := range $1 {",
+      "\t$1[i] = $2[len($2)-1-i]",
+      "}",
+    ]
+  },
+
   "fenwick": {
     "prefix": "fenwick",
     "body": [
