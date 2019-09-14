@@ -1,12 +1,12 @@
 {
   "IO NextInt": {
-    "prefix": "ioni",
+    "prefix": "ii",
     "body": [
       "$1 := io.NextInt()"
     ]
   },
   "IO NextInts": {
-    "prefix": "ionis",
+    "prefix": "iis",
     "body": [
       "$1 := io.NextInts($2)"
     ]
@@ -23,16 +23,16 @@
   "rep": {
     "prefix": "rep",
     "body": [
-      "for i := 0; i < $1; i++ {",
-      "\t$2",
+      "for $1 := 0; $1 < $2; $1++ {",
+      "\t$3",
       "}"
     ]
   },
   "revrep": {
     "prefix": "revrep",
     "body": [
-      "for i := $1; i >= 0; i-- {",
-      "\t$2",
+      "for $1 := $2; $1 >= 0; $1-- {",
+      "\t$3",
       "}"
     ]
   },
@@ -151,12 +151,16 @@
       "\tparents []int",
       "}",
       "",
-      "func (uf *UnionFind) init(n int) {",
+      "func NewUnionFind(n int) *UnionFind {",
+      "\tuf := &UnionFind{}",
+      "",
       "\tuf.parents = make([]int, n)",
       "",
       "\tfor i := range uf.parents {",
       "\t\tuf.parents[i] = -1",
       "\t}",
+      "",
+      "\treturn uf",
       "}",
       "",
       "func (uf *UnionFind) root(x int) int {",
@@ -470,5 +474,35 @@
       ""
     ],
     "description": "OrderedSet"
+  },
+  "Kruskal": {
+    "prefix": "kruskal",
+    "body": [
+      "// コストを考えない Kruskal",
+      "func GetMinEdgeList(edgeList [][]int) [][]int {",
+      "\tuf := NewUnionFind(len(edgeList))",
+      "",
+      "\tminEdgeList := make([][]int, len(edgeList))",
+      "\tfor i := range minEdgeList {",
+      "\t\tminEdgeList[i] = make([]int, 0)",
+      "\t}",
+      "",
+      "\tfor u, uTos := range edgeList {",
+      "\t\tfor _, v := range uTos {",
+      "\t\t\tif u > v || uf.same(u, v) {",
+      "\t\t\t\tcontinue",
+      "\t\t\t}",
+      "",
+      "\t\t\tminEdgeList[u] = append(minEdgeList[u], v)",
+      "\t\t\tminEdgeList[v] = append(minEdgeList[v], u)",
+      "\t\t\tuf.merge(u, v)",
+      "\t\t}",
+      "\t}",
+      "",
+      "\treturn minEdgeList",
+      "}",
+      ""
+    ],
+    "description": "Kruskal"
   }
 }
