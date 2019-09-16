@@ -42,9 +42,7 @@ alias a="tmux attach"
 alias wh='which'
 alias ti='tig'
 alias ip='ifconfig | grep inet | grep broadcast | cut -d " " -f 2'
-alias fk='eval $(thefuck $(fc -ln -1))'
 alias rm='rmtrash'
-alias hb='hub browse'
 
 # remove already merged branches
 alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|staging)\s*$)" | command xargs -n 1 git branch -d'
@@ -98,14 +96,6 @@ function op() {
     open .
   else
     open "$@"
-  fi
-}
-
-function oa() {
-  if [ -z "$1" ]; then
-    open -a /Applications/Atom.app .
-  else
-    open -a /Applications/Atom.app "$@"
   fi
 }
 
