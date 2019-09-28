@@ -2,13 +2,15 @@
   "IO NextInt": {
     "prefix": "ii",
     "body": [
-      "$1 := io.NextInt()"
+      "$1 := io.NextInt()",
+      "$0",
     ]
   },
   "IO NextInts": {
     "prefix": "iis",
     "body": [
-      "$1 := io.NextInts($2)"
+      "$1 := io.NextInts($2)",
+      "$0",
     ]
   },
   "2-dim slice": {
@@ -17,14 +19,15 @@
       "$1 := make([][]int, $2)",
       "for i := range $1 {",
       "\t$1[i] = make([]int, $3)",
-      "}"
+      "}",
+      "$0",
     ]
   },
   "rep": {
     "prefix": "rep",
     "body": [
       "for $1 := 0; $1 < $2; $1++ {",
-      "\t$3",
+      "\t$0",
       "}"
     ]
   },
@@ -32,22 +35,15 @@
     "prefix": "revrep",
     "body": [
       "for $1 := $2; $1 >= 0; $1-- {",
-      "\t$3",
-      "}"
-    ]
-  },
-  "struct": {
-    "prefix": "tyst",
-    "body": [
-      "type $1 struct {",
-      "\t$2",
+      "\t$0",
       "}"
     ]
   },
   "slice": {
     "prefix": "slice",
     "body": [
-      "$1 := make([]int, $2)"
+      "$1 := make([]int, $2)",
+      "$0"
     ]
   },
   "copy-reverse": {
@@ -57,6 +53,7 @@
       "for i := range $1 {",
       "\t$1[i] = $2[len($2)-1-i]",
       "}",
+      "$0"
     ]
   },
 
