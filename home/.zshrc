@@ -179,3 +179,5 @@ if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then source $HOME/google-cl
 # completion
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+eval "$(direnv hook zsh)"
