@@ -181,3 +181,5 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 eval "$(direnv hook zsh)"
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
