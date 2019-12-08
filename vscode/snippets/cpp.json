@@ -37,4 +37,10 @@
       "accumulate($1.begin(), $1.end(), 0)",
     ]
   },
+  "priority_queue_asc": {
+    "prefix": "priority_queue_asc",
+    "body": [
+      "priority_queue<$1, V<$1>, greater<$1>> $2;",
+    ]
+  },
 }
