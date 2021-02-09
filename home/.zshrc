@@ -121,8 +121,8 @@ function cdls() {
 
 function u() {
   with_spaces=$*
-  with_underscore=${with_spaces// /_}
-  git checkout -b $with_underscore
+  with_hyphen=${with_spaces// /-}
+  git checkout -b $with_hyphen
 }
 
 # peco
