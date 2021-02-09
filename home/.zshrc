@@ -125,6 +125,10 @@ function u() {
   git checkout -b $with_hyphen
 }
 
+function cur-bra() {
+  echo $(git symbolic-ref --short HEAD)
+}
+
 # peco
 autoload -Uz is-at-least
 if is-at-least 4.3.11
