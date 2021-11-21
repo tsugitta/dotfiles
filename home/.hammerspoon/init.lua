@@ -25,7 +25,7 @@ end
 
 local function handleGlobalAppEvent(name, event, app)
    if event == hs.application.watcher.activated then
-      if name ~= "iTerm2" then
+      if name ~= "ターミナル" then
          enableAllHotkeys()
       else
          disableAllHotkeys()
