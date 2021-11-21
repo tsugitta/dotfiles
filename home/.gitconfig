@@ -28,3 +28,5 @@
   rebase = preserve
 [rebase]
   autostash = true
+[push]
+  default = current
