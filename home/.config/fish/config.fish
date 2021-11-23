@@ -31,6 +31,7 @@ abbr -a ga "git add"
 abbr -a gb "git branch"
 abbr -a gs "git stash"
 abbr -a gsp "git stash pop"
+abbr -a gr "git rebase"
 abbr -a gsi "git switch"
 abbr -a gsc "git switch -c"
 abbr -a gm "git merge"
@@ -43,5 +44,6 @@ abbr -a gcp "git cherry-pick"
 abbr -a gca "git commit --amend"
 
 abbr -a pi "pod install"
+abbr -a op "open"
 
 eval (direnv hook fish)
