@@ -1,7 +1,8 @@
+set PATH /opt/homebrew/bin $PATH
+
 set -x PATH ~/.anyenv/bin $PATH
 eval (anyenv init - | source)
 
-set PATH /opt/homebrew/bin $PATH
 set PATH $PATH ~/dev/bin
 
 if status is-interactive
