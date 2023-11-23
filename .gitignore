@@ -1,3 +1,5 @@
 home/.zshrc.private
 home/.bundle/cache/
 
+# karabiner's backup
+automatic_backups
