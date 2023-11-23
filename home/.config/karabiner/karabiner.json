@@ -1224,21 +1224,11 @@
             },
             {
               "from": {
-                "key_code": "right_control"
+                "key_code": "page_down"
               },
               "to": [
                 {
-                  "key_code": "right_option"
-                }
-              ]
-            },
-            {
-              "from": {
-                "key_code": "right_option"
-              },
-              "to": [
-                {
-                  "key_code": "right_command"
+                  "consumer_key_code": "volume_decrement"
                 }
               ]
             },
@@ -1254,11 +1244,21 @@
             },
             {
               "from": {
-                "key_code": "page_down"
+                "key_code": "right_control"
               },
               "to": [
                 {
-                  "consumer_key_code": "volume_decrement"
+                  "key_code": "right_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
                 }
               ]
             }
