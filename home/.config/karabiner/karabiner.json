@@ -775,27 +775,6 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com\\.microsoft\\.VSCode$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["caps_lock", "shift"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "tab"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
                     "keyboard_types": ["ansi", "iso"],
                     "type": "keyboard_type_if"
                   },
