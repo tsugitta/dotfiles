@@ -2,7 +2,7 @@
   name = Toshinori Tsugita
   email = tsugita.dev@gmail.com
 [core]
-  excludesfile = /Users/tsugita/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = vim
   pager = less -r
 [color]
